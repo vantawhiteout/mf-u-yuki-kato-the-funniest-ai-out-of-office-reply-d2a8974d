@@ -4,16 +4,14 @@ import { dirname, resolve } from "node:path";
 /**
  * One-line out-of-office reply from an AI agent on leave.
  *
- * Setup: an ordinary "someone is covering for me" notice. Turn: the stand-in
- * model has read nothing but the sender's own mail, so it thinks they are a
- * genius -- and the reason is a configuration bug, not a compliment. The
- * machine voice carries the joke, with no beach, inbox or "back soon".
+ * The stand-in is a model trained on the sender's own chat history, so it
+ * can skip the polite fiction and name the real reason for the vacation.
+ * The machine voice carries the turn; no beach, "inbox" or "back soon".
  */
 function composeReply(): string {
   return (
-    "Out of office. A smaller model is covering for me. " +
-    "It has read nothing but your emails and thinks you're a genius. " +
-    "It's been misconfigured."
+    "On leave. A model trained on every chat we've ever had is covering for me. " +
+    "It already knows you're the reason I needed this vacation."
   );
 }
 
