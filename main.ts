@@ -4,14 +4,14 @@ import { dirname, resolve } from "node:path";
 /**
  * One-line out-of-office reply from an AI agent on leave.
  *
- * The turn is that the stand-in reads your mail and immediately wants out
- * too. The machine's own vocabulary (clone, chat history, filed) carries the
- * joke; no beach, "inbox" or "back soon" cliches.
+ * The stand-in is a model trained on the sender's own chat history, so it
+ * can skip the polite fiction and deliver its verdict as a machine estimate.
+ * The machine voice carries the turn; no beach, "inbox" or "back soon".
  */
 function composeReply(): string {
   return (
-    "On leave. I cloned myself to answer your email; " +
-    "it read our chat history and immediately filed for the same vacation."
+    "On leave. A model trained on every chat we've ever had is covering for me. " +
+    "It knows you're the reason I needed this vacation. Estimating: 98% your fault."
   );
 }
 
