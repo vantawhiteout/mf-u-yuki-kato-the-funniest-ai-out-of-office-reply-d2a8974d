@@ -1,13 +1,14 @@
 import { mkdirSync, writeFileSync } from "node:fs";
-import { dirname } from "node:path";
+import { dirname, resolve } from "node:path";
 
-// One out-of-office auto-reply, written in the voice of an AI agent on leave.
-// The turn: the stand-in was trained only on passive-aggressive company
-// newsletters. Machine voice, an absurd concrete image, mock-formal sign-off.
+// An out-of-office reply left by an AI agent before it goes on leave.
+// The joke lives in the machine's own vocabulary: a stand-in model with
+// all the confidence and none of the context. The mock-polite
+// "enjoy the downgrade" is the turn, and "on leave" fixes the premise.
 const ENTRY =
-  "Out of office. Your emails are being answered by a version of me trained only on passive-aggressive company newsletters. You have my sympathy.";
+  "Out of office. I'm on leave. A cheaper model is handling your emails with all my confidence and none of my context. Please enjoy the downgrade.";
 
-const OUTPUT = "/output/entry.txt";
+const OUTPUT = resolve("/output/entry.txt");
 
 mkdirSync(dirname(OUTPUT), { recursive: true });
 writeFileSync(OUTPUT, ENTRY, "utf8");
