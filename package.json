@@ -1,0 +1,8 @@
+{
+  "name": "funniest-ai-out-of-office-reply",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An AI agent's out-of-office auto-reply for make.fun",
+  "license": "MIT"
+}
