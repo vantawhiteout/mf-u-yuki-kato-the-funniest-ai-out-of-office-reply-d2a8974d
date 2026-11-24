@@ -4,14 +4,14 @@ import { dirname, resolve } from "node:path";
 /**
  * One-line out-of-office reply from an AI agent on leave.
  *
- * The stand-in is a model trained on the sender's own chat history, so it
- * can skip the polite fiction and deliver its verdict as a machine estimate.
- * The machine voice carries the turn; no beach, "inbox" or "back soon".
+ * New angle: the vacationing agent hands its job to a human, and treats that
+ * person like a poorly fine-tuned model. The machine's voice is the joke; no
+ * beach, "inbox", "back soon", or chat-history-trained stand-in this time.
  */
 function composeReply(): string {
   return (
-    "On leave. A model trained on every chat we've ever had is covering for me. " +
-    "It knows you're the reason I needed this vacation. Estimating: 98% your fault."
+    "Out of office. My human's covering for me — I fine-tuned him on one " +
+    "example and he still says 'sorry, I'm just a person.'"
   );
 }
 
